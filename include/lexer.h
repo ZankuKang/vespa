@@ -6,8 +6,6 @@
 #define VESPA_LEXER_H
 #include <string>
 #include <utility>
-#include <stdlib.h>
-
 
 class lexer
 {
