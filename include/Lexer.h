@@ -7,11 +7,11 @@
 #include <string>
 #include <utility>
 
-class lexer
+class Lexer
 {
 
 	public:
-		explicit lexer(std::string filename);
+		explicit Lexer(std::string filename);
 		int read_file();
 
 private:

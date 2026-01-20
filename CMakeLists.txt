@@ -9,11 +9,15 @@ find_package(Boost REQUIRED)
 include_directories(.)
 
 add_executable(vespa
-        include/lexer.cpp
-        include/lexer.h
+        include/Lexer.cpp
+        include/Lexer.h
         main.cpp
-        include/token.cpp
-        include/token.h)
+        include/Tokenizer.cpp
+        include/Tokenizer.h
+        include/TokenType.h
+        include/WordToken.cpp
+        include/WordToken.h
+        include/TokenType.cpp)
 
 target_include_directories(vespa PRIVATE
         ${Boost_INCLUDE_DIRS}

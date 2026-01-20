@@ -2,23 +2,23 @@
 // Created by Pere on 1/18/26.
 //
 
-#include "lexer.h"
-#include "token.h"
+#include "Lexer.h"
+#include "Tokenizer.h"
 #include <fstream>
 #include <iostream>
 
-lexer::lexer(std::string filename) : filename(std::move(filename))
+Lexer::Lexer(std::string filename) : filename(std::move(filename))
 {
 }
 
-int lexer::read_file()
+int Lexer::read_file()
 {
 	std::string vespa_code;
 	std::ifstream source(filename);
 
 	while (std::getline(source, vespa_code))
 	{
-		token tokenizer { token { vespa_code } };
+		Tokenizer tokenizer { Tokenizer { vespa_code } };
 		tokenizer.tokenize();
 		if (tokenizer.was_properly_tokenized())
 		{

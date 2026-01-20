@@ -1,7 +1,7 @@
 //
 // Created by Pere on 1/18/26.
 //
-#include <include/lexer.h>
+#include <include/Lexer.h>
 #include <iostream>
 
 
@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 	}
 
 	std::string filename = argv[1];
-	auto vespa_lexer = lexer(filename);
+	auto vespa_lexer = Lexer(filename);
 	auto result = vespa_lexer.read_file();
 	std::cout << "The result of reading the file is : " << result << std::endl;
 }

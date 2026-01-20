@@ -1,9 +1,3 @@
-import core
-
-module main
-
-
 u32 main() {
-  core::println("Hello World!");
-  return 0;
+    u32 a = 1;
 }
